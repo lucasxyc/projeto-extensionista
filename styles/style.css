@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ---------- Reset básico ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* ---------- Cores e variáveis ---------- */
+:root {
+    --cor-fundo: #000000;
+    --cor-texto: #f5f5f5;
+    --cor-destaque: #00cfff;
+    --cor-link: #00cfff;
+    --cor-link-hover: #008fb3;
+    --cor-rodape: #111111;
+}
+
+/* ---------- Corpo ---------- */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+    background-color: var(--cor-rodape);
+    padding: 1rem 2rem;
+}
+
+.cabecalho__menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cabecalho__menu_link {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cabecalho__menu_link:hover {
+    color: var(--cor-link);
+}
+
+/* ---------- Apresentação ---------- */
+.apresentacao {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 10%;
+    gap: 2rem;
+    text-align: center; 
+}
+
+
+.apresentacao__conteudo {
+    flex: 1 1 450px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--cor-texto);
+}
+.apresentacao__conteudo__subtitulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--cor-texto);
+    text-align: left;
+}
+
+.titulo-destaque {
+    color: var(--cor-destaque);
+}
+
+.apresentacao__conteudo__texto {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+/* ---------- Links sociais ---------- */
+.apresentacao__links {
+    margin-top: 2rem;
+}
+
+.apresentacao__links__subtitulo {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.apresentacao__links__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--cor-destaque);
+    color: #000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.apresentacao__links__link img {
+    width: 20px;
+    height: 20px;
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-link-hover);
+    color: #fff;
+}
+
+/* ---------- Imagem ---------- */
+.apresentacao__imagem {
+    flex: 1 1 300px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.5);
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+    background-color: var(--cor-rodape);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    color: var(--cor-texto);
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 768px) {
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .apresentacao__imagem {
+        margin-top: 1.5rem;
+        max-width: 300px;
+    }
+
+    .cabecalho__menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    /* Aba de Cursos */
+.cursos {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.curso-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.curso-card:hover {
+    transform: scale(1.02);
+}
+
+.curso-card h2 {
+    margin-bottom: 10px;
+    color: #0077cc;
+}
+
+.curso-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.curso-card a:hover {
+    background: #005fa3;
+}
+
+}
